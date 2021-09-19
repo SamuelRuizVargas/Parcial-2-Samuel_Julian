@@ -52,7 +52,9 @@
     \subsection{Objetivo(s)}
     Nuestro objetivo es simple, necesitamos ser capaces de representar una imagen en una matriz de leds de un tamaño por determinar, de la forma más fiel posible e independiente de la resolución de la imagen, haciendo uso de las técnicas de submuestreo y sobremuestreo. 
     \end{flushleft}
+    
     \vspace*{0.5cm}
+    
     \begin{flushleft}
     \subsection{Herramientas}
     Como herramientas de hardware tenemos las tiras neopixel, la tarjeta Arduino uno R3. Además probamos las funciones que nos proporicionaron para analizar una imagen. 
@@ -68,14 +70,26 @@
     \end{flushleft}
     \vspace*{2cm}
     
-\newpage  
     
 \section{Esquema de desarrollo algoritmico}
 \label{esquema}
     \begin{flushleft}
-
+        
+    \subsection{QT}
+    El código de QT debe tener la capacidad de recibir una imagen y ser capaz de entregarnos la información necesaria para el desarrollo de la totalidad de nuestro algoritmo; Esta es nuestra prioridad en la etapa mas temprana de nuestro desarrollo y sobre la que se debe basar nuestro proceso.
     \end{flushleft}
-\newpage
+
+    \begin{flushleft}
+    Una vez conseguida la primera parte del algoritmo tenemos que proceder a analizar de que forma vamos a tratar la información sustraída de dicha imagen, con el fin de facilitar la lectura una vez en Tinkercad, dicho esto el manejo de tipos de datos será esencial para el correcto desempeño del programa.
+    \end{flushleft}
+    \vspace*{0.5cm}
+    
+    
+    \subsection{Tinkercad}
+    \begin{flushleft}
+        Para el desarrollo del código en Tinkercad, pensamos en el flujo de la información de tal manera que podamos recibir la información de QT(La cual esta previamente procesada para no causar conflictos con Tinkercad) y procesarla según dicte el algoritmo que implementemos para realizar la representación de la matriz de Neopixel. 
+    \end{flushleft}
+        
     
 \section{Algoritmo implementado}
 \label{implementado}
