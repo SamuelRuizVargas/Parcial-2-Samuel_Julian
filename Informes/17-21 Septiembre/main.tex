@@ -96,18 +96,16 @@
     \begin{flushleft}
         
     \subsection{QT}
-    Para el algoritmo implementado en QT,  pensamos en hacer uso de la librerias estandar de QT, para leer y escribir una imagen en su formato 
+    Para el algoritmo implementado en QT,  pensamos en hacer uso de las librerias estandar de QT, para leer y escribir una imagen de tal manera que la información obtenida pueda ser manipulada . De esta manera primero validamos la existencia de la imagen, pidiendo la dirección de esta, luego se procede a cargar con la función ImageRead() y escribimos sus datos con ImageWrite(), finalmente guardamos la información en un  archivo de texto que posteriormente será utilizado para tratar la información en Tinkercad.  
     
-    
-    
-    Primero validamos la existencia de la imagen. Si no procedemos a validar, de nuevo. Luego procedemos a leer 
     \end{flushleft}
 
     \vspace*{0.5cm}
     
     \subsection{Tinkercad}
     \begin{flushleft}
-        
+    En Tinkercad tomaremos la información correspondiente de la imagen guardada en una archivo de texto, aplicando alguna técnica de muestreo (Submuestreo o Sobremuestreo) podremos escalar la imagen de tal manera que se adecue a la cantidad leds que tenemos en la matriz. Claramente debemos tener en cuenta el escalamiento correspondiente ya que debemos mantener una fidelidad con la relación aspecto de la imagen.    
+    
     \end{flushleft}
     
     \vspace*{0.1cm}
@@ -115,10 +113,8 @@
 \section{Consideraciones}
 \label{consideraciones}
     \begin{flushleft}
-        
+        Debemos de tener en cuenta la cantidad de leds que tenemos en la matriz ya que, dependiendo de la cantidad de pixeles de la imagen se tiene que aplicar cualquiera de la dos tecnicas, para adaptar la imagen a la cantidad de leds de la matriz.   
     \end{flushleft}
-    \vspace*{2cm}
-\newpage    
     
 
 \vfill
