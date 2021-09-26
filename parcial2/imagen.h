@@ -17,8 +17,11 @@ class imagen
 
 public:
     imagen();
-    void sobremuestreo(int[16][16], int[16][16], int[16][16]);
-    void submuestreo(int[16][16], int[16][16], int[16][16]);
+    int getwidth(string);
+    int getheight(string);
+    void no_muestreo(int[16][16], int[16][16], int[16][16],string);
+    void sobremuestreo(int[16][16], int[16][16], int[16][16],string);
+    void submuestreo(int[16][16], int[16][16], int[16][16],string);
     void guardar(int[16][16], int[16][16], int[16][16]);
     ~imagen();
 };
