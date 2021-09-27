@@ -78,7 +78,7 @@
 \label{esquema}
     \begin{flushleft}
     \subsection{imagen}
-    Esta clase cuenta con 2 atributos que son el ancho y alto de la imagen, las cuales son usadas en el constructor. El constructor es el método principal de la clase, debido a que aquí se realizan la gran mayoría de procesos, dentro de esta se hace el llamado a otros métodos para el correcto funcionamiento del programa.
+    Esta clase cuenta con 2 atributos que son el ancho y alto de la imagen, los cuales son usados en el constructor, en el main y en algunos métodos. Los métodos principales de esta clase son los de muestreos, puesto que son la carta fuerte del programa al ser los encargados de hacer el redimensionamiento y entregar la representación.
     \end{flushleft}
     
     \begin{flushleft}
@@ -152,10 +152,16 @@
     \begin{flushleft}
      \subsection{25/09}
      Para este día se hizo la mayor parte del programa de QT, debido a esto se nos impusieron varios predicamentos, entre ellos el tratamiento en matrices, esto debido a que en algunos casos una matriz tridimensional contenía demasiada información, por lo tanto nos vimos en la necesidad de repartir la información en distintas matrices bidimensionales; Otro problema que detectamos fue la fusión de colores, a pesar de no haber hecho aun los algoritmos de submuestreo y sobremuestreo, haciendo las pruebas de representar una imagen que ya contaba con las dimensiones de nuestra matriz de leds nos dimos cuenta de que en algunos casos los colores podían llegar a verse distorsionados, sin embargo debido a la información brindada por el profesor determinamos que era algo común y correcto que ocurra en algunos procesos de redimensionamiento de imágenes.
-     
-     
+      \end{flushleft}
+     \begin{flushleft}
      \subsection{26/09}   
      En este día terminamos los métodos correspondientes para realizar el submuestreo y el sobremuestro partiendo de una imagen que cumpla con las condiciones iniciales, en este proceso tuvimos varios inconvenientes tales como pensar que manera podíamos hacer dichas representaciones de la forma más fiel que nos fuera posible. Además tuvimos problemas con la forma en la que obteníamos cierta información desde el constructor, el main y otros métodos, por lo tanto se reestructuraron partes del código para tratar la información de manera más eficiente.  
+     
+    \end{flushleft}
+    
+    \begin{flushleft}
+     \subsection{26/09}   
+     En este último día de trabajo nos encontramos con el problema de que nuestro programa no era capaz de recibir imágenes con mucha información, por lo tanto cambiamos la estructura de los datos de arreglos bidimensionales comunes a vectores anidados, puesto que pueden contener más información sin romper el programa y con esto el problema quedo solucionado.
      
     \end{flushleft}
     
@@ -172,16 +178,12 @@
     
     \vspace{0.1cm}
     
-    2. El usuario debe tener presente que la imagen no sobrepase los límites de tamaño.
-    
-    \vspace{0.1cm}
-    
-    3. Por último el usuario tiene que cerciorarse que el formato de esta debe ser".jpg".
+    2. Se le recomienda al usuario que la imagen tenga un nombre sencillo de recordar y/o escribir, puesto que se requerirá más adelante.
     \end{flushleft}
     
     \begin{flushleft}
     \subsubsection{Uso de la interfaz}
-    En la interfaz, debe ingresar el nombre de la imagen correspondiente y su respectiva extensión para evitar errores, en caso de que la imagen no pueda ser cargada se le indicará. 
+    En la interfaz, debe ingresar el nombre de la imagen correspondiente y su respectiva extensión; Para evitar errores, en caso de que la imagen no pueda ser cargada se le indicará mediante un mensaje. 
     \end{flushleft}
     \begin{flushleft}
     \subsubsection{Retorno de la información}
