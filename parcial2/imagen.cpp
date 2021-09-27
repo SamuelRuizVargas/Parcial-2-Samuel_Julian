@@ -134,7 +134,71 @@ void imagen::sobremuestreo(int r[16][16], int g[16][16], int b[16][16],string no
             }
         }
         //FIN DATOS DE LA IMAGEN
-
+        int width_multi,height_multi;
+        if(width>=8)
+        {
+            width_multi=2;
+        }
+        else
+        {
+            width_multi=3;
+        }
+        if(height>=8)
+        {
+            height_multi=2;
+        }
+        else
+        {
+            height_multi=3;
+        }
+        int rojo,verde,azul;
+        for(int i=0;i<width;i++)
+        {
+            for(int j=0;j<height;j++)
+            {
+                rojo=datos_originales_r[i][j];
+                if(rojo==255)
+                {
+                    rojo=250;
+                }
+                else if(rojo==0)
+                {
+                    rojo=5;
+                }
+                verde=datos_originales_g[i][j];
+                if(verde==255)
+                {
+                    verde=250;
+                }
+                else if(verde==0)
+                {
+                    verde=5;
+                }
+                azul=datos_originales_b[i][j];
+                if(azul==255)
+                {
+                    azul=250;
+                }
+                else if(azul==0)
+                {
+                    azul=5;
+                }
+                for(int k=0;k<width_multi;k++)
+                {
+                    for(int l=0;l<height_multi;l++)
+                    {
+                        int pos_fila=k+(width_multi*i),pos_columna=l+(height_multi*j);
+                        if(pos_fila>=16 or pos_columna>=16)
+                        {
+                            break;
+                        }
+                        r[pos_fila][pos_columna]=rojo;
+                        g[pos_fila][pos_columna]=verde;
+                        b[pos_fila][pos_columna]=azul;
+                    }
+                }
+            }
+        }
     }
 }
 
