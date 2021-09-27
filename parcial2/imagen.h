@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <QImage>
+#include <vector>
 
 #define PATH_IM "../parcial2/imagenes/"
 #define PATH_SAVE "../parcial2/saves/resultado.txt"
