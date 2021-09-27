@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
     string nom_img;
-    cout<<"NOTA: el programa no admite imagenes demasiado grandes y solo acepta imagenes .jpg"<<endl<<endl;
     cout<<"Ingrese el nombre de su archivo(con extension): ";cin>>nom_img;
     nom_img=PATH_IM+nom_img;
     imagen im=imagen();

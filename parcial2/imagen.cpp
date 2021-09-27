@@ -48,9 +48,9 @@ void imagen::no_muestreo(int r[16][16], int g[16][16], int b[16][16],string nomb
     {
         width=img.width();//ancho
         height=img.height();//alto
-        int datos_originales_r[width][height];//valores de R por pixel
-        int datos_originales_g[width][height];//valores de G por pixel
-        int datos_originales_b[width][height];//valores de B por pixel
+        vector<vector<int>> datos_originales_r(width,vector<int>(height));;//valores de R por pixel
+        vector<vector<int>> datos_originales_g(width,vector<int>(height));//valores de G por pixel
+        vector<vector<int>> datos_originales_b(width,vector<int>(height));//valores de B por pixel
         for(int i=0;i<3;i++)//iterador para sacar todos los datos de la imagen
         {
             for(int j=0;j<width;j++)
@@ -109,9 +109,9 @@ void imagen::sobremuestreo(int r[16][16], int g[16][16], int b[16][16],string no
     {
         width=img.width();//ancho
         height=img.height();//alto
-        int datos_originales_r[width][height];//valores de R por pixel
-        int datos_originales_g[width][height];//valores de G por pixel
-        int datos_originales_b[width][height];//valores de B por pixel
+        vector<vector<int>> datos_originales_r(width,vector<int>(height));;//valores de R por pixel
+        vector<vector<int>> datos_originales_g(width,vector<int>(height));//valores de G por pixel
+        vector<vector<int>> datos_originales_b(width,vector<int>(height));//valores de B por pixel
         for(int i=0;i<3;i++)//iterador para sacar todos los datos de la imagen
         {
             for(int j=0;j<width;j++)
@@ -214,9 +214,9 @@ void imagen::submuestreo(int r[16][16], int g[16][16], int b[16][16],string nomb
     {
         width=img.width();//ancho
         height=img.height();//alto
-        int datos_originales_r[width][height];//valores de R por pixel
-        int datos_originales_g[width][height];//valores de G por pixel
-        int datos_originales_b[width][height];//valores de B por pixel
+        vector<vector<int>> datos_originales_r(width,vector<int>(height));;//valores de R por pixel
+        vector<vector<int>> datos_originales_g(width,vector<int>(height));//valores de G por pixel
+        vector<vector<int>> datos_originales_b(width,vector<int>(height));//valores de B por pixel
         for(int i=0;i<3;i++)//iterador para sacar todos los datos de la imagen
         {
             for(int j=0;j<width;j++)
