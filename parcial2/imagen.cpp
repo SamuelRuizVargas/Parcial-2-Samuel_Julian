@@ -240,6 +240,14 @@ void imagen::submuestreo(int r[16][16], int g[16][16], int b[16][16],string nomb
         }
         //FIN DATOS DE LA IMAGEN
         int width_divi=width/16,height_divi=height/16;
+        if(height<16)
+        {
+            height_divi=1;
+        }
+        if(width<16)
+        {
+            width_divi=1;
+        }
         int cubo_actu_r[width_divi][height_divi];
         int cubo_actu_g[width_divi][height_divi];
         int cubo_actu_b[width_divi][height_divi];
@@ -252,11 +260,12 @@ void imagen::submuestreo(int r[16][16], int g[16][16], int b[16][16],string nomb
                 {
                     for(int l=0;l<height_divi;l++)//itera las columnas de la subseccion de la imagen
                     {
-                        rojo=datos_originales_r[k+(width_divi*j)][l+(height_divi*i)];
+                        int pos_fila=k+(width_divi*j),pos_columna=l+(height_divi*i);
+                        rojo=datos_originales_r[pos_fila][pos_columna];
                         cubo_actu_r[k][l]=rojo;
-                        verde=datos_originales_g[k+(width_divi*j)][l+(height_divi*i)];
+                        verde=datos_originales_g[pos_fila][pos_columna];
                         cubo_actu_g[k][l]=verde;
-                        azul=datos_originales_b[k+(width_divi*j)][l+(height_divi*i)];
+                        azul=datos_originales_b[pos_fila][pos_columna];
                         cubo_actu_b[k][l]=azul;
                     }
                 }
